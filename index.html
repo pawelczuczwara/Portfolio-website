@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <title>Porfolio Pawel Czuczwara</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
 
         <img class="header__logo" src="img/udacity_logo.png" alt="logo">
         <h1 class="header__title">Portfolio Paweł Czuczwara</h1>
-        <p class="header__desc">Interaction designer</p>
+        <p class="header__desc">Web developer & GIS specialist</p>
     </header>
 
     <nav id="panel" class="nav">
@@ -30,62 +31,38 @@
     <main>
         <!-- Projects section -->
         <div class="section">
-            <div class="section_proj big">
-                <a href="https://github.com/" target=”_blank”>
-                    <img src="img/p_idea_650.jpg"
-                        srcset='img/p_idea_325.jpg 325w,
-                                img/p_idea_650.jpg 650w,
-                                img/p_idea_1024.jpg 1024w'
-                        sizes='(max-width: 400px) 325px,
-                            (max-width: 900px) 650px,
-                            1024px'
-                        alt="Project One">
-                </a>
-                <p>Project One description</p>
-                <a href="https://github.com/">//github.com/</a>
-            </div>
-            <div class="section_proj sma">
-                <a href="https://pablos.eu/wp/" target=”_blank”>
-                    <img src="img/p_dron_450.jpg" alt="Drone services">
-                </a>
-                <p>Drone services website</p>
-                <a href="https://pablos.eu/wp/">//pablos.eu/wp/</a>
-            </div>
-            <div class="section_proj sma">
-                <a href="https://www.behance.net/gallery/29794267/Safe-Gluten-Free-Travel/" target=”_blank”>
-                    <img src="img/p_mobile_450.jpg" alt="Mobile application">
-                </a>
-                <p>Mobile application design</p>
-                <a href="https://www.behance.net/gallery/29794267/Safe-Gluten-Free-Travel/">//behance.net/</a>
-            </div>
-            <div class="section_proj sma">
-                <a href="https://github.com/" target=”_blank”>
-                    <img src="img/p_css_450.jpg" alt="Project Four">
-                </a>
-                <p>Project Four description</p>
-                <a href="https://github.com/">//github.com/</a>
-            </div>
-            <div class="section_proj sma">
-                <a href="https://www.shutterstock.com/g/Pawel+Czuczwara/" target=”_blank”>
-                    <img src="img/p_photo_450.jpg" alt="Commercial photography">
-                </a>
-                <p>Commercial photography</p>
-                <a href="https://www.shutterstock.com/g/Pawel+Czuczwara/">//shutterstock.com/</a>
-            </div>
-            <div class="section_proj sma">
-                <a href="https://pablos.eu/st/" target=”_blank”>
-                    <img src="img/p_shop_450.jpg" alt="E-commerce shop" >
-                </a>
-                <p>E-commerce shop</p>
-                <a href="https://pablos.eu/st/">//pablos.eu/st/</a>
-            </div>
-        </div>
+            <script class='big_entry_template' type='text/x-handlebars-template'>
+                <div class="section_proj big">
+                    <a href='{{url}}' target='_blank'>
+                        <img src='img/{{img_src}}'
+                            srcset='{{img_srcset}}'
+                            sizes='(max-width: 400px) 325px,
+                                (max-width: 900px) 650px,
+                                1024px'
+                            alt='{{img_alt}}'>
+                    </a>
+                    <p>{{p_des}}</p>
+                    <!-- <a href='{{url}}' target='_blank'>{{url_txt}}</a> -->
+                    <a href='{{git}}' target='_blank'>{{git_txt}}</a>
+                </div>
+            </script>
+            <script class='entry_template' type='text/x-handlebars-template'>
+                <div class='section_proj sma'>
+                    <a href='{{url}}' target='_blank'>
+                        <img src='img/{{img_src}}' alt='{{img_alt}}''>
+                    </a>
+                    <p>{{p_des}}</p>
+                    <a href='{{url}}' target='_blank'>{{url_txt}}</a>
+                    <a href='{{git}}' target='_blank'>{{git_txt}}</a>
+                </div>
+            </script>
+
     </main>
     <footer class="footer">
         <!-- Footer and XXX:XXX for javascript -->
         <p class='view__size'>XXX:XXX</p>
         <img class="footer__img" src="img/p_mua.jpg" alt="Mua">
-        <p class="footer__about">Interaction designer, programmer, engineer and GIS designer with a wide experience in digital maps design, certified drone pilot. I like to travel and visit new beautiful places dominated by untouched nature. And free time is for snowboarding, surfing and bicycle rides.</p>
+        <p class="footer__about">Web developer, programmer, engineer and GIS designer with a wide experience in digital maps design, certified drone pilot. I like to travel and visit new beautiful places dominated by untouched nature. And free time is for snowboarding, surfing and bicycle rides.</p>
         <p id="about">Pawel Czuczwara | +48 631 071206</p>
     </footer>
 </div>
