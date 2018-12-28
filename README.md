@@ -3,4 +3,4 @@ Responsive portfolio HTML CSS JavaScript website
 
 - Object oriented programming pattern,
 - Handlebars template based content,
-- JavaScript promises content loader
+- JavaScript promises driven loader
