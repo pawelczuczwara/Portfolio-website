@@ -120,6 +120,11 @@ a:hover {
     /* text-align: center; */
 }
 
+.section_proj {
+    display: flex;
+    flex-flow: column;
+}
+
 .section_proj img {
     width: 100%;
 }
