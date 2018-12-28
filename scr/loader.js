@@ -51,7 +51,7 @@ Promise.all([
     // load.img('img/p_idea_650.jpg')
   ]).then(function() {
     init();
-    console.log('loading completed!');
+    // console.log('loading completed!');
   }).catch(function() {
     console.log('loading failure!');
   });

@@ -56,7 +56,7 @@ const allProjects = [
         git_txt: '//github.com/memory/'
     },
     {
-        p_des: 'Jasmine framework',
+        p_des: 'Jasmine code testing framework',
         url: 'https://pawelc.eu/program/jasmine/',
         url_txt: '//pawelc.eu/jasmine/',
         img_src: 'p_test_450.jpg',

@@ -64,8 +64,8 @@ window.addEventListener('resize', () => startSize());
 
 function init() {
     //remove please wait message.
-    const wait = document.querySelector('.wait');
-    wait.parentNode.removeChild(wait);
+    const wait_node = document.querySelector('.wait');
+    wait_node.parentNode.removeChild(wait_node);
 
     const menu    = new CreateContent(menuData,    '.menu_template',      '.nav__list');
     const big_prj = new CreateContent(bigProjects, '.big_entry_template', '.section');
