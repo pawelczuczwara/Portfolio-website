@@ -4,18 +4,22 @@ const menuData = [
     {
         name: 'coding',
         url: 'https://github.com/pawelczuczwara',
+        target: '_blank'
     },
     {
         name: 'linkedin',
         url: 'https://www.linkedin.com/in/czuczwara/',
+        target: '_blank'
     },
     // {
     //     name: 'digital maps',
     //     url: '#',
+        //    target: '',
     // },
     {
         name: 'about',
         url: '#about',
+        target: '',
     },
 ];
 

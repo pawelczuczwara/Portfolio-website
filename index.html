@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script> -->
 </head>
 <body>
 <div class="container">
@@ -24,7 +24,7 @@
           <!-- TODO: additional pages Coding, Photo, GIS Maps. -->
             <script class='menu_template' type='text/x-handlebars-template'>
                 <li class="nav__item">
-                    <a href='{{url}}' target='_blank'>{{name}}</a>
+                    <a href='{{url}}' target='{{target}}'>{{name}}</a>
                 </li>
             </script>
         </ul>
@@ -33,6 +33,7 @@
     <main>
         <!-- Projects section -->
         <div class="section">
+            <p class='wait'>Page is loading. Plase wait.</p>
             <script class='big_entry_template' type='text/x-handlebars-template'>
                 <div class="section_proj big">
                     <a href='{{url}}' target='_blank'>
@@ -69,7 +70,9 @@
         <p id="about">Pawel Czuczwara | +48 631 071206</p>
     </footer>
 </div>
-<script src="scr/content.js"></script>
-<script src="scr/script.js"></script>
+<script src="scr/loader.js"></script>
+<!-- <script src="scr/handlebars.min.js"></script> -->
+<!-- <script src="scr/content.js"></script> -->
+<!-- <script src="scr/script.js"></script> -->
 </body>
 </html>

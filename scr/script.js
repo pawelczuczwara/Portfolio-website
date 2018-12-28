@@ -22,6 +22,7 @@ class CreateContent
     }
 
     createHTML() {
+
         let compiled_html       = '';
         const compiled_template = this._getTemplate();
 
@@ -34,9 +35,6 @@ class CreateContent
 
 }
 
-const menu    = new CreateContent(menuData,    '.menu_template',      '.nav__list');
-const big_prj = new CreateContent(bigProjects, '.big_entry_template', '.section');
-const sma_prj = new CreateContent(allProjects, '.entry_template',     '.section');
 // Provides information about window size
 function startSize() {
     let viewX,
@@ -64,11 +62,20 @@ navButton.addEventListener('click', () => {
 });
 window.addEventListener('resize', () => startSize());
 
-(function init() {
+function init() {
+    //remove please wait message.
+    const wait = document.querySelector('.wait');
+    wait.parentNode.removeChild(wait);
+
+    const menu    = new CreateContent(menuData,    '.menu_template',      '.nav__list');
+    const big_prj = new CreateContent(bigProjects, '.big_entry_template', '.section');
+    const sma_prj = new CreateContent(allProjects, '.entry_template',     '.section');
+
     menu   .createHTML();
     big_prj.createHTML();
     sma_prj.createHTML();
 
             startSize();
-})();
+};
+// init();
 
