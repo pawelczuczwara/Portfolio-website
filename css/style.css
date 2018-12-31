@@ -260,6 +260,10 @@ a:hover {
     .section_proj.big {
         grid-column: span 2;
     }
+
+    .footer__img {
+        width: 15%;
+    }
 }
 
 /* On screens 600-900px */
